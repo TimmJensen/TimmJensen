@@ -1,4 +1,9 @@
 ### Hi there 👋
+### And welcome to my Github profile!
+
+- 🏷️ Currently working at i-Strategi ApS as Fullstack Developer.
+- 🌱 Currently self-learning Laravel for expanding my PHP knowledge.
+- 📫 You can reach me by my email: [Timm.m.jensen@gmail.com](mailto:Timm.m.jensen@gmail.com)
 
 <!--
 **TimmJensen/TimmJensen** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
