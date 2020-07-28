@@ -1,7 +1,11 @@
 ### Hi there 👋
 ### And welcome to my Github profile!
 
+
+
 - 🏷️ I'm currently working at i-Strategi ApS as Fullstack Developer.
+- 🏷️ Previously worked with React.js, WordPress (With WooCommerce), RestAPI.
+
 - 🌱 At the momment, i'm looking at tutorials online for Laravel-development for expanding my PHP knowledge.
 - 📫 You can reach me by my email: [Timm.m.jensen@gmail.com](mailto:Timm.m.jensen@gmail.com)
 
