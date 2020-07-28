@@ -1,8 +1,8 @@
 ### Hi there 👋
 ### And welcome to my Github profile!
 
-- 🏷️ Currently working at i-Strategi ApS as Fullstack Developer.
-- 🌱 Currently self-learning Laravel for expanding my PHP knowledge.
+- 🏷️ I'm currently working at i-Strategi ApS as Fullstack Developer.
+- 🌱 At the momment, i'm looking at tutorials online for Laravel-development for expanding my PHP knowledge.
 - 📫 You can reach me by my email: [Timm.m.jensen@gmail.com](mailto:Timm.m.jensen@gmail.com)
 
 <!--
