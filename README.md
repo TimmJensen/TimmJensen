@@ -1,6 +1,7 @@
 ### Hi there 👋
 ### And welcome to my Github profile!
 
+To get a little insight of who i am, read below.
 
 
 - 🏷️ I'm currently working at i-Strategi ApS as Fullstack Developer.
