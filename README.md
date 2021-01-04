@@ -8,7 +8,7 @@ To get a little insight of who i am, read below.
 - 🏷️ Previously worked with React.js, WordPress (With WooCommerce), RestAPI.
 
 - 🌱 At the momment, i'm looking at tutorials online for Laravel-development for expanding my PHP knowledge.
-- 📫 You can reach me by my email: [Timm.m.jensen@gmail.com](mailto:Timm.m.jensen@gmail.com)
+- 📫 You can reach me by my email: [mail@famjensen.dev](mailto:mail@famjensen.dev)
 
 <!--
 **TimmJensen/TimmJensen** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
