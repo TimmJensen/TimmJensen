@@ -4,7 +4,8 @@
 To get a little insight of who i am, read below.
 
 
-- 🏷️ I'm currently working at i-Strategi ApS as Fullstack Developer.
+- 🏷️ I'm currently working at Husted & Co/Shophelten.dk as Fullstack Developer.
+- 🏷️ Previously worked at i-Strategi ApS as Fullstack Developer.
 - 🏷️ Previously worked with React.js, WordPress (With WooCommerce), RestAPI.
 
 - 🌱 At the momment, i'm looking at tutorials online for Laravel-development for expanding my PHP knowledge.
