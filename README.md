@@ -8,7 +8,7 @@ To get a little insight of who i am, read below.
 - 🏷️ Previously worked at i-Strategi ApS as Fullstack Developer.
 - 🏷️ Previously worked with React.js, WordPress (With WooCommerce), RestAPI.
 
-- 🌱 At the momment, i'm looking at tutorials online for Laravel-development for expanding my PHP knowledge.
+- 🌱 At the momment, I'm expanding my knowledge for Laravel-development, Ruby on rails aswell as Shopify's Liquid-templating lang.
 - 📫 You can reach me by my email: [mail@famjensen.dev](mailto:mail@famjensen.dev)
 
 <!--
