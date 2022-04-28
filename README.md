@@ -1,12 +1,12 @@
 ### Hi there 👋
 ### And welcome to my Github profile!
 
-To get a little insight of who i am, read below.
+To get a little insight of who I am, read below.
 
 
 - 🏷️ I'm currently working at Husted & Co/Shophelten.dk as Fullstack Developer.
 - 🏷️ Previously worked at i-Strategi ApS as Fullstack Developer.
-- 🏷️ Previously worked with React.js, WordPress (With WooCommerce), RestAPI.
+- 🏷️ Previously worked with React.js, WordPress (With WooCommerce), RestAPI, Directus.io and Node.js with Express.js.
 
 - 🌱 At the momment, I'm expanding my knowledge for Laravel-development, Ruby on rails aswell as Shopify's Liquid-templating lang.
 - 📫 You can reach me by my email: [mail@famjensen.dev](mailto:mail@famjensen.dev)
