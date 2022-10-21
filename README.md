@@ -21,9 +21,4 @@
 </div>
 
 ###
-
-<br clear="both">
-
-<img src="https://raw.githubusercontent.com/TimmJensen/TimmJensen/blob/output/snake.svg" alt="Snake animation" />
-
-###
+Profile Readme Generator
