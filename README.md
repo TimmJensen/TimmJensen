@@ -1,27 +1,29 @@
-### Hi there 👋
-### And welcome to my Github profile!
+<br clear="both">
 
-To get a little insight of who I am, read below.
+<h2 align="center">Hi 👋! My name is Timm and I'm a Lead Developer at ShopHelten, from Denmark</h2>
 
+###
 
-- 🏷️ I'm currently working at Husted & Co/Shophelten.dk as Fullstack Developer.
-- 🏷️ Previously worked at i-Strategi ApS as Fullstack Developer.
-- 🏷️ Previously worked with React.js, WordPress (With WooCommerce), RestAPI, Directus.io and Node.js with Express.js.
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&username=TimmJensen" height="150" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&username=TimmJensen" height="150" alt="languages graph"  />
+</div>
 
-- 🌱 At the momment, I'm expanding my knowledge for Laravel-development, Ruby on rails aswell as Shopify's Liquid-templating lang.
-- 📫 You can reach me by my email: [mail@famjensen.dev](mailto:mail@famjensen.dev)
+###
 
-<!--
-**TimmJensen/TimmJensen** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<div align="center">
+  <a href="https://www.linkedin.com/in/timm-m-jensen/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
+  </a>
+  <a href="https://www.linkedin.com/in/timm-m-jensen/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Stackoverflow&logo=stackoverflow&label=&color=FE7A16&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="stackoverflow logo"  />
+  </a>
+</div>
 
-Here are some ideas to get you started:
+###
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<br clear="both">
+
+<img src="https://raw.githubusercontent.com/TimmJensen/TimmJensen/blob/output/snake.svg" alt="Snake animation" />
+
+###
