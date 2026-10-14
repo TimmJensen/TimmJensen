@@ -27,7 +27,7 @@ const TILE_BG_OVERRIDES = { woocommerce: '#7F54B3' };
 const GLYPH_SIZE = 150;
 const GLYPH_SIZE_OVERRIDES = { woocommerce: 200 };
 
-// Single-color 24x24 icons drawn on a dark tile in their brand color
+// Single-color icons drawn on a dark tile in their brand color
 const BRAND_COLORS = {
   shopify: '#95BF47',
   woocommerce: '#FFFFFF',
@@ -38,6 +38,7 @@ const BRAND_COLORS = {
   anthropic: '#D97757',
   grok: '#FFFFFF',
   cursor: '#FFFFFF',
+  gdscript: '#478CBF',
 };
 
 const GROUPS = [
@@ -47,7 +48,7 @@ const GROUPS = [
   { label: 'DATA', items: [['postgres', 'PostgreSQL'], ['mysql', 'MySQL'], ['redis', 'Redis']] },
   { label: 'HOSTING & DEVOPS', items: [['docker', 'Docker'], ['digitalocean', 'DigitalOcean'], ['railway', 'Railway'], ['hetzner', 'Hetzner'], ['git', 'Git']] },
   { label: 'AI & TOOLING', items: [['openai', 'OpenAI'], ['anthropic', 'Anthropic'], ['grok', 'Grok'], ['cursor', 'Cursor'], ['vscode', 'VS Code']] },
-  { label: 'GAME DEV', fullWidth: true, items: [['unity', 'Unity'], ['cs', 'C#'], ['godot', 'Godot / GDScript']] },
+  { label: 'GAME DEV', fullWidth: true, items: [['unity', 'Unity'], ['cs', 'C#'], ['godot', 'Godot'], ['gdscript', 'GDScript']] },
 ];
 
 function escapeXml(text) {
@@ -61,16 +62,24 @@ function skillTile(name) {
   return match[1].trim();
 }
 
+// Icon coordinate size from viewBox, falling back to the width attribute
+function iconUnits(svgText, name) {
+  const match = svgText.match(/viewBox="0 0 ([\d.]+)/) ?? svgText.match(/<svg[^>]*\swidth="([\d.]+)"/);
+  if (!match) throw new Error(`Could not read icon size of brand icon "${name}"`);
+  return Number(match[1]);
+}
+
 function brandTile(name) {
   const svgText = readFileSync(join(brandDir, `${name}.svg`), 'utf8');
   const paths = svgText.match(/<path[^>]*?(?:\/>|>\s*<\/path>)/g);
   if (!paths) throw new Error(`No <path> elements found in brand icon "${name}"`);
   const fillRule = svgText.includes('fill-rule="evenodd"') ? 'evenodd' : 'nonzero';
+  const units = iconUnits(svgText, name);
   const size = GLYPH_SIZE_OVERRIDES[name] ?? GLYPH_SIZE;
   const offset = (256 - size) / 2;
   return `<svg width="256" height="256" viewBox="0 0 256 256">
 <rect width="256" height="256" rx="60" fill="${TILE_BG_OVERRIDES[name] ?? TILE_BG}"/>
-<g transform="translate(${offset} ${offset}) scale(${size / 24})" fill="${BRAND_COLORS[name]}" fill-rule="${fillRule}">${paths.join('')}</g>
+<g transform="translate(${offset} ${offset}) scale(${size / units})" fill="${BRAND_COLORS[name]}" fill-rule="${fillRule}">${paths.map((path) => path.replace(/\sfill="[^"]*"/g, '')).join('')}</g>
 </svg>`;
 }
 
