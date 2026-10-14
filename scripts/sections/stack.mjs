@@ -36,6 +36,7 @@ const BRAND_COLORS = {
   anthropic: '#D97757',
   grok: '#FFFFFF',
   cursor: '#FFFFFF',
+  claude: '#D97757',
   gdscript: '#478CBF',
 };
 
@@ -45,7 +46,7 @@ const GROUPS = [
   { label: 'BACKEND & APIS', items: [['nodejs', 'Node.js'], ['graphql', 'GraphQL'], ['php', 'PHP'], ['laravel', 'Laravel'], ['cs', 'C#']] },
   { label: 'DATA', items: [['postgres', 'PostgreSQL'], ['mysql', 'MySQL'], ['redis', 'Redis']] },
   { label: 'HOSTING & DEVOPS', items: [['docker', 'Docker'], ['digitalocean', 'DigitalOcean'], ['railway', 'Railway'], ['hetzner', 'Hetzner'], ['git', 'Git']] },
-  { label: 'AI & TOOLING', items: [['openai', 'OpenAI'], ['anthropic', 'Anthropic'], ['grok', 'Grok'], ['cursor', 'Cursor'], ['vscode', 'VS Code']] },
+  { label: 'AI & TOOLING', items: [['openai', 'OpenAI'], ['anthropic', 'Anthropic'], ['grok', 'Grok'], ['cursor', 'Cursor'], ['claude', 'Claude Code']] },
   { label: 'GAME DEV', fullWidth: true, items: [['unity', 'Unity'], ['cs', 'C#'], ['godot', 'Godot'], ['gdscript', 'GDScript']] },
 ];
 
