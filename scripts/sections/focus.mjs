@@ -6,6 +6,14 @@ const CARD_WIDTH = (INNER_WIDTH - GAP) / 2;
 const CARD_HEIGHT = 104;
 const TOP = 64;
 const DESC_MAX_CHARS = 44;
+// Cards start shifted left (never hidden) so a frozen animation still shows them
+const SLIDE_DISTANCE = 24;
+
+const SHINE_GRADIENT = `<defs><linearGradient id="shine" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0" stop-color="${COLORS.accent}" stop-opacity="0"/>
+<stop offset=".5" stop-color="${COLORS.accent}" stop-opacity=".16"/>
+<stop offset="1" stop-color="${COLORS.accent}" stop-opacity="0"/>
+</linearGradient></defs>`;
 
 // 24x24 stroke icons
 const ICONS = {
@@ -32,13 +40,17 @@ function areaCard(area, index) {
   const desc = wrapText(area.desc, DESC_MAX_CHARS)
     .map((line, i) => `<text class="desc" x="76" y="${62 + i * 18}">${escapeXml(line)}</text>`)
     .join('\n');
-  return `<g transform="translate(${x} ${y})">
+  const slideDelay = (index * 0.12).toFixed(2);
+  const shineDelay = (1.2 + index * 0.25).toFixed(2);
+  return `<g transform="translate(${x} ${y})"><g class="slide" style="animation-delay:${slideDelay}s">
+<clipPath id="card-clip-${index}"><rect width="${CARD_WIDTH}" height="${CARD_HEIGHT}" rx="12"/></clipPath>
 <rect class="card" x="0" y="0" width="${CARD_WIDTH}" height="${CARD_HEIGHT}" rx="12"/>
+<rect class="shine" x="-160" y="0" width="140" height="${CARD_HEIGHT}" fill="url(#shine)" clip-path="url(#card-clip-${index})" style="animation-delay:${shineDelay}s"/>
 <rect x="20" y="20" width="40" height="40" rx="10" fill="${COLORS.accentSoft}" stroke="${COLORS.cardStroke}"/>
 <g transform="translate(28 28) scale(1)" stroke="${COLORS.accent}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="${ICONS[area.icon]}"/></g>
 <text class="title" x="76" y="38">${escapeXml(area.title)}</text>
 ${desc}
-</g>`;
+</g></g>`;
 }
 
 export function buildFocus() {
@@ -46,7 +58,12 @@ export function buildFocus() {
   const height = TOP + rows * CARD_HEIGHT + (rows - 1) * GAP + PAD;
   const style = `
 .title{font-size:15px;font-weight:600;fill:${COLORS.heading}}
-.desc{font-size:12.5px;fill:${COLORS.muted}}`;
-  const body = `${sectionLabel('What I work on')}\n${AREAS.map(areaCard).join('\n')}`;
+.desc{font-size:12.5px;fill:${COLORS.muted}}
+.slide{animation:slide .7s cubic-bezier(.22,1,.36,1) backwards}
+.shine{animation:shine 7s ease-in-out infinite}
+@keyframes slide{from{transform:translateX(-${SLIDE_DISTANCE}px)}to{transform:none}}
+@keyframes shine{0%{transform:translateX(0)}18%,100%{transform:translateX(${CARD_WIDTH + 200}px)}}`;
+  const body = `${SHINE_GRADIENT}
+${sectionLabel('What I work on')}\n${AREAS.map(areaCard).join('\n')}`;
   return panelSvg({ height, body, style });
 }
