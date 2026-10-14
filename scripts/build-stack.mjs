@@ -45,7 +45,7 @@ const GROUPS = [
   { label: 'BACKEND & APIS', items: [['nodejs', 'Node.js'], ['graphql', 'GraphQL'], ['php', 'PHP'], ['laravel', 'Laravel']] },
   { label: 'AI', items: [['openai', 'OpenAI'], ['anthropic', 'Anthropic'], ['grok', 'Grok']] },
   { label: 'HOSTING', items: [['digitalocean', 'DigitalOcean'], ['railway', 'Railway'], ['hetzner', 'Hetzner']] },
-  { label: 'TOOLING', items: [['git', 'Git'], ['vscode', 'VS Code'], ['cursor', 'Cursor']] },
+  { label: 'TOOLING', items: [['git', 'Git'], ['vscode', 'VS Code'], ['cursor', 'Cursor'], ['docker', 'Docker']] },
 ];
 
 function escapeXml(text) {
