@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://shophelten.dk">
-    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&duration=3000&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=Custom+Shopify+themes+on+Online+Store+2.0;Shopify+Functions+and+checkout+extensions;GraphQL+integrations+with+ERP+and+PIM;Fast+stores.+Clean+code.+No+bloat." alt="What I build" />
+    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&duration=4000&pause=3000&color=3B82F6&center=true&vCenter=true&width=600&lines=Custom+Shopify+themes+on+Online+Store+2.0;Shopify+Functions+and+checkout+extensions;GraphQL+integrations+with+ERP+and+PIM;Fast+stores.+Clean+code.+No+bloat." alt="What I build" />
   </a>
 </p>
 
