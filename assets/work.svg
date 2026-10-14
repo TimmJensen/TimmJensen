@@ -6,15 +6,14 @@
 </linearGradient></defs>
 <style>
 text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif}
-.card{fill:rgba(59,130,246,.05);stroke:rgba(59,130,246,.28);stroke-width:1}
+.card{fill:#0f172a;stroke:rgba(59,130,246,.35);stroke-width:1}
 .num{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:17px;font-weight:600;fill:#3B82F6}
-.title{font-size:16px;font-weight:600;fill:#1f2328}
-.sub{font-size:13px;fill:#59636e}
+.title{font-size:16px;font-weight:600;fill:#e6edf3}
+.sub{font-size:13px;fill:#94a3b8}
 .slide{animation:slide .7s cubic-bezier(.22,1,.36,1) backwards}
 .shine{animation:shine 7s ease-in-out infinite}
 @keyframes slide{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:none}}
 @keyframes shine{0%{transform:translateX(0)}18%,100%{transform:translateX(800px)}}
-@media (prefers-color-scheme:dark){.title{fill:#e6edf3}.sub{fill:#9198a1}.card{fill:rgba(59,130,246,.07)}}
 @media (prefers-reduced-motion:reduce){.slide,.shine{animation:none}}</style>
 <g transform="translate(0 6)">
 <g class="slide" style="animation-delay:0.00s">
