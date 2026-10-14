@@ -47,6 +47,7 @@ const GROUPS = [
   { label: 'DATA', items: [['postgres', 'PostgreSQL'], ['mysql', 'MySQL'], ['redis', 'Redis']] },
   { label: 'HOSTING & DEVOPS', items: [['docker', 'Docker'], ['digitalocean', 'DigitalOcean'], ['railway', 'Railway'], ['hetzner', 'Hetzner'], ['git', 'Git']] },
   { label: 'AI & TOOLING', items: [['openai', 'OpenAI'], ['anthropic', 'Anthropic'], ['grok', 'Grok'], ['cursor', 'Cursor'], ['vscode', 'VS Code']] },
+  { label: 'GAME DEV', fullWidth: true, items: [['unity', 'Unity'], ['cs', 'C#'], ['godot', 'Godot / GDScript']] },
 ];
 
 function escapeXml(text) {
@@ -88,14 +89,36 @@ function tileFor(key) {
   return skillTile(key);
 }
 
-function slotWidth(itemCount) {
-  return Math.min(MAX_SLOT, (CARD_WIDTH - 2 * SLOT_PAD) / itemCount);
+function slotWidth(itemCount, cardWidth) {
+  return Math.min(MAX_SLOT, (cardWidth - 2 * SLOT_PAD) / itemCount);
 }
 
-function groupCard(group, index) {
-  const slot = slotWidth(group.items.length);
-  const x = OFFSET_X + (index % 2) * (CARD_WIDTH + COL_GAP);
-  const y = Math.floor(index / 2) * (CARD_HEIGHT + ROW_GAP) + 1;
+// Places half-width cards two per row; a fullWidth card takes a row of its own
+function layoutGroups(groups) {
+  const placed = [];
+  let row = 0;
+  let col = 0;
+  for (const group of groups) {
+    if (group.fullWidth && col !== 0) {
+      row += 1;
+      col = 0;
+    }
+    const width = group.fullWidth ? PANEL_WIDTH : CARD_WIDTH;
+    const x = OFFSET_X + col * (CARD_WIDTH + COL_GAP);
+    const y = row * (CARD_HEIGHT + ROW_GAP) + 1;
+    placed.push({ group, x, y, width });
+    if (group.fullWidth || col === 1) {
+      row += 1;
+      col = 0;
+    } else {
+      col = 1;
+    }
+  }
+  return { placed, rows: col === 0 ? row : row + 1 };
+}
+
+function groupCard({ group, x, y, width }) {
+  const slot = slotWidth(group.items.length, width);
   const scale = ICON / 256;
   const items = group.items.map(([key, name], i) => {
     const slotX = SLOT_PAD + i * slot;
@@ -104,14 +127,14 @@ function groupCard(group, index) {
 <text class="name" x="${slotX + slot / 2}" y="104" text-anchor="middle">${escapeXml(name)}</text>`;
   });
   return `<g transform="translate(${x} ${y})">
-<rect class="card" x="0" y="0" width="${CARD_WIDTH}" height="${CARD_HEIGHT - 2}" rx="12"/>
+<rect class="card" x="0" y="0" width="${width}" height="${CARD_HEIGHT - 2}" rx="12"/>
 <text class="label" x="${SLOT_PAD + (slot - ICON) / 2}" y="25">${escapeXml(group.label)}</text>
 ${items.join('\n')}
 </g>`;
 }
 
 function buildStackSvg(groups) {
-  const rows = Math.ceil(groups.length / 2);
+  const { placed, rows } = layoutGroups(groups);
   const width = OFFSET_X + PANEL_WIDTH;
   const height = rows * CARD_HEIGHT + (rows - 1) * ROW_GAP + 2;
   const style = `
@@ -121,7 +144,7 @@ text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helveti
 .name{font-size:10px;fill:#94a3b8}`;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none">
 <style>${style}</style>
-${groups.map(groupCard).join('\n')}
+${placed.map(groupCard).join('\n')}
 </svg>
 `;
 }
