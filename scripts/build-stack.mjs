@@ -36,6 +36,7 @@ const BRAND_COLORS = {
   openai: '#FFFFFF',
   anthropic: '#D97757',
   grok: '#FFFFFF',
+  cursor: '#FFFFFF',
 };
 
 const GROUPS = [
@@ -44,7 +45,7 @@ const GROUPS = [
   { label: 'BACKEND & APIS', items: [['nodejs', 'Node.js'], ['graphql', 'GraphQL'], ['php', 'PHP']] },
   { label: 'AI', items: [['openai', 'OpenAI'], ['anthropic', 'Anthropic'], ['grok', 'Grok']] },
   { label: 'HOSTING', items: [['digitalocean', 'DigitalOcean'], ['railway', 'Railway'], ['hetzner', 'Hetzner']] },
-  { label: 'TOOLING', items: [['git', 'Git'], ['vscode', 'VS Code']] },
+  { label: 'TOOLING', items: [['git', 'Git'], ['vscode', 'VS Code'], ['cursor', 'Cursor']] },
 ];
 
 function escapeXml(text) {
