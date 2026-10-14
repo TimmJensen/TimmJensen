@@ -4,7 +4,7 @@
 
 <img src="assets/focus.svg" width="100%" alt="What I work on: Shopify themes, Functions and extensions, integrations, performance, migrations, AI and automation." />
 
-<img src="assets/stack.svg" width="100%" alt="Stack: Shopify, Liquid, WordPress, WooCommerce, HTML, CSS, Tailwind, JavaScript, TypeScript, Node.js, GraphQL, PHP, Laravel, C#, PostgreSQL, MySQL, Redis, Docker, DigitalOcean, Railway, Hetzner, Git, OpenAI, Anthropic, Grok, Cursor, Claude Code, Unity, Godot, GDScript." />
+<img src="assets/stack.svg" width="100%" alt="Stack: Shopify, Liquid, WordPress, WooCommerce, HTML, CSS, Tailwind, JavaScript, TypeScript, Node.js, GraphQL, PHP, Laravel, C#, PostgreSQL, MySQL, Redis, Docker, DigitalOcean, Railway, Hetzner, Git, OpenAI, Anthropic, Grok, Claude Code, Cursor, Unity, Godot, GDScript." />
 
 <img src="assets/activity.svg" width="100%" alt="Activity" />
 
