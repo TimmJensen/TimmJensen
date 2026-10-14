@@ -21,7 +21,7 @@ integrations and the performance work that keeps it all fast.
 
 ### What I work on
 
-<img src="assets/work.svg" width="600" alt="Custom Shopify themes on Online Store 2.0. Shopify Functions and checkout extensions. Admin and Storefront GraphQL integrations with ERP, PIM, shipping and marketing tools. Performance and Core Web Vitals. Migrations from WooCommerce, Magento and other platforms." />
+<img src="assets/work.svg" width="628" alt="Custom Shopify themes on Online Store 2.0. Shopify Functions and checkout extensions. Admin and Storefront GraphQL integrations with ERP, PIM, shipping and marketing tools. Performance and Core Web Vitals. Migrations from WooCommerce, Magento and other platforms." />
 
 ### Stack
 
