@@ -8,6 +8,7 @@
 
 <p align="center">
   <a href="https://shophelten.dk"><img src="https://img.shields.io/badge/ShopHelten-shophelten.dk-7AB55C?style=for-the-badge&logo=shopify&logoColor=white" alt="ShopHelten" /></a>
+  <a href="https://www.linkedin.com/in/timm-m-jensen/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
 
 ---
@@ -45,6 +46,7 @@ integrations and the performance work that keeps it all fast.
 
 ### Get in touch
 
-Need help with a Shopify project? Reach out at [shophelten.dk](https://shophelten.dk).
+Need help with a Shopify project? Reach out at [shophelten.dk](https://shophelten.dk)
+or connect on [LinkedIn](https://www.linkedin.com/in/timm-m-jensen/).
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:7AB55C,100:0f172a&height=100&section=footer" width="100%" alt="" />
