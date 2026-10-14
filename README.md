@@ -26,7 +26,7 @@ integrations and the performance work that keeps it all fast.
 ### Stack
 
 <p>
-  <img src="assets/stack.svg" width="660" alt="Shopify, Liquid, JavaScript, TypeScript, Node.js, GraphQL, HTML, CSS, PHP, Git, VS Code" />
+  <img src="assets/stack.svg" width="628" alt="Shopify, Liquid, JavaScript, TypeScript, Node.js, GraphQL, HTML, CSS, PHP, Git, VS Code" />
 </p>
 
 ### Activity
