@@ -25,7 +25,7 @@ const TILE_BG_OVERRIDES = { woocommerce: '#7F54B3' };
 
 // Glyph size inside the 256 tile; wide wordmarks get more room
 const GLYPH_SIZE = 150;
-const GLYPH_SIZE_OVERRIDES = { woocommerce: 200 };
+const GLYPH_SIZE_OVERRIDES = { woocommerce: 200, gdscript: 180 };
 
 // Single-color icons drawn on a dark tile in their brand color
 const BRAND_COLORS = {
