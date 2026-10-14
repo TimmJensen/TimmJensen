@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="230" viewBox="0 0 840 230" fill="none">
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.label{font-size:11px;font-weight:600;letter-spacing:2px;fill:#94a3b8}
+.card{fill:#0f172a;stroke:rgba(59,130,246,.30);stroke-width:1}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+.name{font-size:40px;font-weight:700;fill:#f1f5f9;letter-spacing:-.5px}
+.title{font-size:17px;fill:#94a3b8}
+.loc{font-size:13px;font-weight:600;fill:#3B82F6}
+.tag{font-size:11.5px;font-weight:600;fill:#cbd5e1}
+.cta{font-size:13px;font-weight:600;fill:#ffffff}
+.in{font-size:11px;font-weight:700;fill:#3B82F6}
+.orbit{transform-box:fill-box;transform-origin:center;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}</style>
+<rect x="0.5" y="0.5" width="839" height="229" rx="16" fill="#0b1220" stroke="rgba(59,130,246,.22)"/>
+<rect x="36" y="40" width="28" height="3" rx="1.5" fill="#3B82F6"/>
+<text class="name" x="36" y="92">Timm Jensen</text>
+<text class="title" x="36" y="124">Lead Fullstack Developer · Shopify &amp; e-commerce</text>
+<text class="loc" x="36" y="150">Based in Denmark</text>
+<rect x="36" y="168" width="103" height="26" rx="13" fill="#0f172a" stroke="rgba(59,130,246,.30)"/>
+<text x="87.5" y="185" text-anchor="middle" class="tag">Shopify Plus</text>
+<rect x="147" y="168" width="83" height="26" rx="13" fill="#0f172a" stroke="rgba(59,130,246,.30)"/>
+<text x="188.5" y="185" text-anchor="middle" class="tag">Fullstack</text>
+<rect x="238" y="168" width="103" height="26" rx="13" fill="#0f172a" stroke="rgba(59,130,246,.30)"/>
+<text x="289.5" y="185" text-anchor="middle" class="tag">Integrations</text>
+<rect x="349" y="168" width="103" height="26" rx="13" fill="#0f172a" stroke="rgba(59,130,246,.30)"/>
+<text x="400.5" y="185" text-anchor="middle" class="tag">AI workflows</text>
+<circle cx="698" cy="92" r="60" stroke="#3B82F6" stroke-opacity=".35" stroke-dasharray="2 7" class="orbit"/>
+<circle cx="698" cy="92" r="44" fill="rgba(59,130,246,.12)" stroke="#3B82F6" stroke-width="1.5"/>
+<g transform="translate(680 74) scale(1.5)" stroke="#3B82F6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+<path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 5l-3 14"/>
+</g>
+<rect x="592" y="164" width="212" height="34" rx="17" fill="#3B82F6"/>
+<rect x="604" y="173" width="16" height="16" rx="3" fill="#ffffff"/>
+<text x="612" y="185.5" text-anchor="middle" class="in">in</text>
+<text x="630" y="186" class="cta">Connect on LinkedIn</text>
+<path d="M778 181h10m-4-4 4 4-4 4" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

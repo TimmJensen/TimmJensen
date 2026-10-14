@@ -3,8 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build:stack": "node scripts/build-stack.mjs icons/skillicons icons/brands icons/liquid.png assets/stack.svg",
-    "build:work": "node scripts/build-workon.mjs assets/work.svg",
-    "build": "npm run build:stack && npm run build:work"
+    "build": "node scripts/build.mjs"
   }
 }

@@ -1,15 +1,13 @@
-// Builds a static, grouped stack SVG from skillicons tiles, single-color brand icons and the Liquid logo
-import { readFileSync, writeFileSync } from 'node:fs';
+// Stack panel: grouped cards of skillicons tiles, single-color brand icons and the Liquid logo
+import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { COLORS, INNER_WIDTH, PAD, escapeXml, panelSvg, sectionLabel } from '../lib/theme.mjs';
 
-const [skillDir, brandDir, liquidPng, outFile] = process.argv.slice(2);
-if (!skillDir || !brandDir || !liquidPng || !outFile) {
-  throw new Error('Usage: node build-stack.mjs <skilliconsDir> <brandDir> <liquid.png> <out.svg>');
-}
+const ICON_DIRS = { skill: 'icons/skillicons', brand: 'icons/brands', liquid: 'icons/liquid.png' };
 
-// Grid that lines up with the work cards (x 28..628)
-const OFFSET_X = 28;
-const PANEL_WIDTH = 600;
+const OFFSET_X = PAD;
+const PANEL_WIDTH = INNER_WIDTH;
+const TOP = 64;
 const COL_GAP = 12;
 const ROW_GAP = 12;
 const CARD_WIDTH = (PANEL_WIDTH - COL_GAP) / 2;
@@ -51,12 +49,8 @@ const GROUPS = [
   { label: 'GAME DEV', fullWidth: true, items: [['unity', 'Unity'], ['cs', 'C#'], ['godot', 'Godot'], ['gdscript', 'GDScript']] },
 ];
 
-function escapeXml(text) {
-  return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
-
 function skillTile(name) {
-  const svgText = readFileSync(join(skillDir, `${name}.svg`), 'utf8');
+  const svgText = readFileSync(join(ICON_DIRS.skill, `${name}.svg`), 'utf8');
   const match = svgText.match(/<g transform="translate\(0, 0\)">([\s\S]*)<\/g>\s*<\/svg>\s*$/);
   if (!match) throw new Error(`Could not find inner svg wrapper in skillicon "${name}"`);
   return match[1].trim();
@@ -70,7 +64,7 @@ function iconUnits(svgText, name) {
 }
 
 function brandTile(name) {
-  const svgText = readFileSync(join(brandDir, `${name}.svg`), 'utf8');
+  const svgText = readFileSync(join(ICON_DIRS.brand, `${name}.svg`), 'utf8');
   const paths = svgText.match(/<path[^>]*?(?:\/>|>\s*<\/path>)/g);
   if (!paths) throw new Error(`No <path> elements found in brand icon "${name}"`);
   const fillRule = svgText.includes('fill-rule="evenodd"') ? 'evenodd' : 'nonzero';
@@ -84,7 +78,7 @@ function brandTile(name) {
 }
 
 function liquidTile() {
-  const pngBase64 = readFileSync(liquidPng).toString('base64');
+  const pngBase64 = readFileSync(ICON_DIRS.liquid).toString('base64');
   return `<svg width="256" height="256" viewBox="0 0 256 256">
 <defs><clipPath id="liquid-clip"><rect width="256" height="256" rx="60"/></clipPath></defs>
 <rect width="256" height="256" rx="60" fill="#FEFDFB"/>
@@ -114,7 +108,7 @@ function layoutGroups(groups) {
     }
     const width = group.fullWidth ? PANEL_WIDTH : CARD_WIDTH;
     const x = OFFSET_X + col * (CARD_WIDTH + COL_GAP);
-    const y = row * (CARD_HEIGHT + ROW_GAP) + 1;
+    const y = TOP + row * (CARD_HEIGHT + ROW_GAP);
     placed.push({ group, x, y, width });
     if (group.fullWidth || col === 1) {
       row += 1;
@@ -137,26 +131,17 @@ function groupCard({ group, x, y, width }) {
   });
   return `<g transform="translate(${x} ${y})">
 <rect class="card" x="0" y="0" width="${width}" height="${CARD_HEIGHT - 2}" rx="12"/>
-<text class="label" x="${SLOT_PAD + (slot - ICON) / 2}" y="25">${escapeXml(group.label)}</text>
+<text class="glabel" x="${SLOT_PAD + (slot - ICON) / 2}" y="25">${escapeXml(group.label)}</text>
 ${items.join('\n')}
 </g>`;
 }
 
-function buildStackSvg(groups) {
-  const { placed, rows } = layoutGroups(groups);
-  const width = OFFSET_X + PANEL_WIDTH;
-  const height = rows * CARD_HEIGHT + (rows - 1) * ROW_GAP + 2;
+export function buildStack() {
+  const { placed, rows } = layoutGroups(GROUPS);
+  const height = TOP + rows * CARD_HEIGHT + (rows - 1) * ROW_GAP + PAD;
   const style = `
-text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif}
-.card{fill:#0f172a;stroke:rgba(59,130,246,.35);stroke-width:1}
-.label{font-size:11px;font-weight:600;letter-spacing:1.5px;fill:#3B82F6}
-.name{font-size:10px;fill:#94a3b8}`;
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none">
-<style>${style}</style>
-${placed.map(groupCard).join('\n')}
-</svg>
-`;
+.glabel{font-size:11px;font-weight:600;letter-spacing:1.5px;fill:${COLORS.accent}}
+.name{font-size:10.5px;fill:${COLORS.muted}}`;
+  const body = `${sectionLabel('Stack')}\n${placed.map(groupCard).join('\n')}`;
+  return panelSvg({ height, body, style });
 }
-
-writeFileSync(outFile, buildStackSvg(GROUPS));
-console.log(`Wrote ${outFile} with ${GROUPS.length} groups`);
