@@ -2,7 +2,7 @@
 <style>
 .pop{transform-box:fill-box;transform-origin:center;animation:pop .6s cubic-bezier(.34,1.56,.64,1) backwards}
 .float{transform-box:fill-box;transform-origin:center;animation:float 3.2s ease-in-out infinite}
-@keyframes pop{from{opacity:0;transform:translateY(30px) scale(.6)}to{opacity:1;transform:none}}
+@keyframes pop{from{transform:translateY(30px) scale(.6)}to{transform:none}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
 @media (prefers-reduced-motion:reduce){.pop,.float{animation:none}}</style>
 <g transform="translate(40 40)"><g class="pop" style="animation-delay:0.00s"><g class="float" style="animation-delay:0.00s"><svg width="256" height="256" viewBox="0 0 256 256">
