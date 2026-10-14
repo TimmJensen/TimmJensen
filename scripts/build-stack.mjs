@@ -43,7 +43,7 @@ const BRAND_COLORS = {
 const GROUPS = [
   { label: 'COMMERCE & CMS', items: [['shopify', 'Shopify'], ['liquid', 'Liquid'], ['wordpress', 'WordPress'], ['woocommerce', 'WooCommerce']] },
   { label: 'FRONTEND', items: [['html', 'HTML'], ['css', 'CSS'], ['tailwind', 'Tailwind'], ['js', 'JavaScript'], ['ts', 'TypeScript']] },
-  { label: 'BACKEND & APIS', items: [['nodejs', 'Node.js'], ['graphql', 'GraphQL'], ['php', 'PHP'], ['laravel', 'Laravel']] },
+  { label: 'BACKEND & APIS', items: [['nodejs', 'Node.js'], ['graphql', 'GraphQL'], ['php', 'PHP'], ['laravel', 'Laravel'], ['cs', 'C#']] },
   { label: 'DATA', items: [['postgres', 'PostgreSQL'], ['mysql', 'MySQL'], ['redis', 'Redis']] },
   { label: 'HOSTING & DEVOPS', items: [['docker', 'Docker'], ['digitalocean', 'DigitalOcean'], ['railway', 'Railway'], ['hetzner', 'Hetzner'], ['git', 'Git']] },
   { label: 'AI & TOOLING', items: [['openai', 'OpenAI'], ['anthropic', 'Anthropic'], ['grok', 'Grok'], ['cursor', 'Cursor'], ['vscode', 'VS Code']] },
