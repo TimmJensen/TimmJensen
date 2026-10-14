@@ -14,4 +14,4 @@
   <img alt="Contribution snake animation" width="100%" src="https://raw.githubusercontent.com/TimmJensen/TimmJensen/output/github-snake.svg" />
 </picture>
 
-<img src="assets/quote.svg" width="100%" alt="Understand the business, design the solution, build it to last and leave the code better than I found it." />
+<img src="assets/quote.svg" width="100%" alt="Recommendation from Mathias Liljeberg, Project Manager: What I value most about Timm is his ability to understand a task far beyond the technical implementation. He digs into the purpose, the client's needs and the solution as a whole, and often brings ideas that lift the result beyond what was originally asked for." />
