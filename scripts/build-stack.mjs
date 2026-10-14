@@ -15,7 +15,8 @@ const ROW_GAP = 12;
 const CARD_WIDTH = (PANEL_WIDTH - COL_GAP) / 2;
 const CARD_HEIGHT = 120;
 const ICON = 44;
-const SLOT = 57;
+// Icon slot width; cards with fewer icons get more room, capped for consistency
+const MAX_SLOT = 70;
 const SLOT_PAD = 7;
 const TILE_BG = '#242938';
 
@@ -40,7 +41,7 @@ const BRAND_COLORS = {
 };
 
 const GROUPS = [
-  { label: 'COMMERCE & CMS', items: [['wordpress', 'WordPress'], ['shopify', 'Shopify'], ['liquid', 'Liquid'], ['woocommerce', 'WooCommerce']] },
+  { label: 'COMMERCE & CMS', items: [['shopify', 'Shopify'], ['liquid', 'Liquid'], ['wordpress', 'WordPress'], ['woocommerce', 'WooCommerce']] },
   { label: 'FRONTEND', items: [['html', 'HTML'], ['css', 'CSS'], ['tailwind', 'Tailwind'], ['js', 'JavaScript'], ['ts', 'TypeScript']] },
   { label: 'BACKEND & APIS', items: [['nodejs', 'Node.js'], ['graphql', 'GraphQL'], ['php', 'PHP'], ['laravel', 'Laravel']] },
   { label: 'DATA', items: [['postgres', 'PostgreSQL'], ['mysql', 'MySQL'], ['redis', 'Redis']] },
@@ -87,19 +88,24 @@ function tileFor(key) {
   return skillTile(key);
 }
 
+function slotWidth(itemCount) {
+  return Math.min(MAX_SLOT, (CARD_WIDTH - 2 * SLOT_PAD) / itemCount);
+}
+
 function groupCard(group, index) {
+  const slot = slotWidth(group.items.length);
   const x = OFFSET_X + (index % 2) * (CARD_WIDTH + COL_GAP);
   const y = Math.floor(index / 2) * (CARD_HEIGHT + ROW_GAP) + 1;
   const scale = ICON / 256;
   const items = group.items.map(([key, name], i) => {
-    const slotX = SLOT_PAD + i * SLOT;
-    const iconX = slotX + (SLOT - ICON) / 2;
+    const slotX = SLOT_PAD + i * slot;
+    const iconX = slotX + (slot - ICON) / 2;
     return `<g transform="translate(${iconX} 40) scale(${scale})">${tileFor(key)}</g>
-<text class="name" x="${slotX + SLOT / 2}" y="104" text-anchor="middle">${escapeXml(name)}</text>`;
+<text class="name" x="${slotX + slot / 2}" y="104" text-anchor="middle">${escapeXml(name)}</text>`;
   });
   return `<g transform="translate(${x} ${y})">
 <rect class="card" x="0" y="0" width="${CARD_WIDTH}" height="${CARD_HEIGHT - 2}" rx="12"/>
-<text class="label" x="${SLOT_PAD + (SLOT - ICON) / 2}" y="25">${escapeXml(group.label)}</text>
+<text class="label" x="${SLOT_PAD + (slot - ICON) / 2}" y="25">${escapeXml(group.label)}</text>
 ${items.join('\n')}
 </g>`;
 }
