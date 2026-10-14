@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:2563EB&height=180&section=header&text=Timm%20Jensen&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Shopify%20Developer%20%C2%B7%20Denmark&descAlignY=58&descSize=18&animation=fadeIn" width="100%" alt="Timm Jensen - Shopify Developer" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:2563EB&height=180&section=header&text=Timm%20Jensen&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Lead%20Fullstack%20Developer%20%C2%B7%20Denmark&descAlignY=58&descSize=18&animation=fadeIn" width="100%" alt="Timm Jensen - Lead Fullstack Developer" />
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&duration=4000&pause=3000&color=3B82F6&center=true&vCenter=true&width=600&lines=Custom+Shopify+themes+on+Online+Store+2.0;Shopify+Functions+and+checkout+extensions;GraphQL+integrations+with+ERP+and+PIM;Fast+stores.+Clean+code.+No+bloat." alt="What I build" />
@@ -12,7 +12,7 @@
 
 ### About
 
-Shopify developer based in Denmark.
+Lead fullstack developer based in Denmark, working mainly with Shopify.
 I build and maintain Shopify stores for brands and retailers: custom themes, store architecture,
 integrations and the performance work that keeps it all fast.
 
