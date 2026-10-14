@@ -30,10 +30,7 @@ integrations and the performance work that keeps it all fast.
 ### Stack
 
 <p>
-  <img src="https://skillicons.dev/icons?i=js,ts,nodejs,graphql,html,css,php,git,vscode&theme=dark" alt="Tech stack" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/Shopify-3B82F6?style=flat-square&logo=shopify&logoColor=white" alt="Shopify" />
-  <img src="https://img.shields.io/badge/Liquid-000000?style=flat-square&logo=shopify&logoColor=white" alt="Liquid" />
+  <img src="assets/stack.svg" width="660" alt="Shopify, Liquid, JavaScript, TypeScript, Node.js, GraphQL, HTML, CSS, PHP, Git, VS Code" />
 </p>
 
 ### Activity
