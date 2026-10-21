@@ -1,31 +1,17 @@
-<a href="https://www.linkedin.com/in/timm-m-jensen/"><img src="assets/hero.svg" width="100%" alt="Timm Jensen - Lead Fullstack Developer, Shopify and e-commerce. Based in Denmark. Connect on LinkedIn." /></a>
+<a href="https://www.linkedin.com/in/timm-m-jensen/"><img src="assets/hero.svg" width="100%" alt="Timm Jensen - Fullstack Developer. Based in Denmark. Connect on LinkedIn." /></a>
 
-## Hi, I'm Timm
+<img src="assets/about.svg" width="100%" alt="About: Fullstack developer in Denmark (~8 years). Builds web products end to end with React/TypeScript, Node/Express and PHP/Laravel, and product features powered by LLM APIs (OpenAI, Anthropic). Currently at ShopHelten, building Shopify apps, integrations and storefronts." />
 
-Fullstack developer in Denmark (~8 years). I build web products end to end, from React/TypeScript frontends to Node/Express and PHP/Laravel backends, and I ship product features powered by LLM APIs (OpenAI, Anthropic).
+<img src="assets/focus.svg" width="100%" alt="What I work on: end-to-end product work, Shopify apps Functions and Liquid storefronts, GraphQL and REST integrations, performance, LLM API features with OpenAI and Anthropic (not ML engineering), and Shopify migrations." />
 
-Currently at [ShopHelten](https://shophelten.dk), building Shopify apps, integrations and storefronts.
+<img src="assets/stack.svg" width="100%" alt="Stack: TypeScript, React, Node.js, Express, PHP, Laravel, MySQL, MongoDB, Docker, CircleCI, Shopify, Liquid, WordPress, GraphQL, OpenAI, Anthropic." />
 
-I care about clean architecture and code the next developer can pick up without a guide.
+<img src="assets/activity.svg" width="100%" alt="Activity" />
 
-## What I work on
-
-- **End-to-end product work** — React/TypeScript UIs, Node/Express or PHP/Laravel APIs, and the data layer behind them
-- **Shopify** — apps, Functions, Liquid storefronts, and integrations that connect stores to ERP, PIM and shipping systems, including migrations from WooCommerce and Magento
-- **Integrations** — GraphQL and REST between products and the systems around them
-- **Performance** — fast storefronts and web apps, Core Web Vitals, lean and maintainable code
-- **LLM APIs** — product features that call OpenAI and Anthropic, not model training or MLOps
-
-## Stack
-
-**Core:** TypeScript, React, Node.js / Express, PHP / Laravel, MySQL, MongoDB, Docker, CircleCI
-
-**Also:** Shopify (apps, Functions, Liquid), WordPress, GraphQL, OpenAI / Anthropic APIs
-
-For fun I tinker with Unity and Godot.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/TimmJensen/TimmJensen/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/TimmJensen/TimmJensen/output/github-snake.svg" />
+  <img alt="Contribution snake animation" width="100%" src="https://raw.githubusercontent.com/TimmJensen/TimmJensen/output/github-snake.svg" />
+</picture>
 
 <img src="assets/quote.svg" width="100%" alt="Recommendation from Mathias Liljeberg, Project Manager: What I value most about Timm is his ability to understand a task far beyond the technical implementation. He doesn’t just work from a list of requirements – he digs into the purpose, the client’s needs and the solution as a whole, and often brings ideas that lift the result beyond what was originally asked for." />
-
-## Contact
-
-[LinkedIn](https://www.linkedin.com/in/timm-m-jensen/)

@@ -7,9 +7,9 @@ const TAG_GAP = 8;
 
 const PROFILE = {
   name: 'Timm Jensen',
-  title: 'Lead Fullstack Developer · Shopify & e-commerce',
+  title: 'Fullstack Developer',
   location: 'Based in Denmark',
-  tags: ['Shopify Plus', 'Fullstack', 'Integrations', 'AI workflows'],
+  tags: ['Fullstack', 'Shopify', 'Integrations', 'LLM APIs'],
   cta: 'Connect on LinkedIn',
 };
 

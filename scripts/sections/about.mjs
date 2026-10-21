@@ -2,12 +2,12 @@
 import { COLORS, PAD, escapeXml, panelSvg, sectionLabel, wrapText } from '../lib/theme.mjs';
 
 const LINE_HEIGHT = 24;
-const MAX_CHARS = 100;
+const MAX_CHARS = 99;
 
-const ABOUT = 'Lead fullstack developer based in Denmark, working mainly with Shopify and e-commerce. '
-  + 'I build custom themes, Shopify Functions and app extensions, and the integrations that connect stores '
-  + 'to ERP, PIM and shipping systems. I care about fast storefronts, clean architecture and code the next '
-  + 'developer can pick up without a guide. AI tooling is a fixed part of how I build, test and document.';
+const ABOUT = 'Fullstack developer in Denmark (~8 years). I build web products end to end, from React/TypeScript '
+  + 'frontends to Node/Express and PHP/Laravel backends, and I ship product features powered by LLM APIs '
+  + '(OpenAI, Anthropic). Currently at ShopHelten, building Shopify apps, integrations and storefronts. '
+  + 'I care about clean architecture and code the next developer can pick up without a guide.';
 
 export function buildAbout() {
   const lines = wrapText(ABOUT, MAX_CHARS);

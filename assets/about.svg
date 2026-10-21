@@ -8,8 +8,8 @@ text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helveti
 <rect x="0.5" y="0.5" width="839" height="181" rx="16" fill="#0b1220" stroke="rgba(59,130,246,.22)"/>
 <rect x="36" y="35" width="20" height="2" rx="1" fill="#3B82F6"/>
 <text class="label" x="66" y="40">ABOUT</text>
-<text class="body" x="36" y="76">Lead fullstack developer based in Denmark, working mainly with Shopify and e-commerce. I build</text>
-<text class="body" x="36" y="100">custom themes, Shopify Functions and app extensions, and the integrations that connect stores to</text>
-<text class="body" x="36" y="124">ERP, PIM and shipping systems. I care about fast storefronts, clean architecture and code the next</text>
-<text class="body" x="36" y="148">developer can pick up without a guide. AI tooling is a fixed part of how I build, test and document.</text>
+<text class="body" x="36" y="76">Fullstack developer in Denmark (~8 years). I build web products end to end, from React/TypeScript</text>
+<text class="body" x="36" y="100">frontends to Node/Express and PHP/Laravel backends, and I ship product features powered by LLM APIs</text>
+<text class="body" x="36" y="124">(OpenAI, Anthropic). Currently at ShopHelten, building Shopify apps, integrations and storefronts.</text>
+<text class="body" x="36" y="148">I care about clean architecture and code the next developer can pick up without a guide.</text>
 </svg>
