@@ -26,12 +26,12 @@ const ICONS = {
 };
 
 const AREAS = [
-  { icon: 'bag', title: 'Shopify themes', desc: 'Online Store 2.0, sections, theme blocks, metafields and metaobjects' },
-  { icon: 'code', title: 'Functions & extensions', desc: 'Discounts, validation, checkout and customer account UI extensions' },
-  { icon: 'nodes', title: 'Integrations', desc: 'Admin and Storefront GraphQL connecting ERP, PIM, shipping and marketing' },
-  { icon: 'bolt', title: 'Performance', desc: 'Core Web Vitals, lean Liquid and storefronts that stay fast' },
+  { icon: 'code', title: 'End-to-end products', desc: 'React/TypeScript UIs, Node/Express or PHP/Laravel backends' },
+  { icon: 'bag', title: 'Shopify', desc: 'Apps, Functions, Liquid storefronts and store integrations' },
+  { icon: 'nodes', title: 'Integrations', desc: 'GraphQL and REST connecting ERP, PIM, shipping and other systems' },
+  { icon: 'bolt', title: 'Performance', desc: 'Core Web Vitals, lean code, storefronts and apps that stay fast' },
+  { icon: 'sparkle', title: 'LLM APIs', desc: 'Product features via OpenAI and Anthropic, not model training' },
   { icon: 'arrows', title: 'Migrations', desc: 'From WooCommerce, Magento and other platforms to Shopify' },
-  { icon: 'sparkle', title: 'AI & automation', desc: 'AI agents and workflows for development, QA and documentation' },
 ];
 
 function areaCard(area, index) {

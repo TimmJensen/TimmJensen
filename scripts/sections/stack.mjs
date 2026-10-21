@@ -38,16 +38,16 @@ const BRAND_COLORS = {
   cursor: '#FFFFFF',
   claude: '#D97757',
   gdscript: '#478CBF',
+  circleci: '#FFFFFF',
 };
 
 const GROUPS = [
-  { label: 'COMMERCE & CMS', items: [['shopify', 'Shopify'], ['liquid', 'Liquid'], ['wordpress', 'WordPress'], ['woocommerce', 'WooCommerce']] },
-  { label: 'FRONTEND', items: [['html', 'HTML'], ['css', 'CSS'], ['tailwind', 'Tailwind'], ['js', 'JavaScript'], ['ts', 'TypeScript']] },
-  { label: 'BACKEND & APIS', items: [['nodejs', 'Node.js'], ['graphql', 'GraphQL'], ['php', 'PHP'], ['laravel', 'Laravel'], ['cs', 'C#']] },
-  { label: 'DATA', items: [['postgres', 'PostgreSQL'], ['mysql', 'MySQL'], ['redis', 'Redis']] },
-  { label: 'HOSTING & DEVOPS', items: [['docker', 'Docker'], ['digitalocean', 'DigitalOcean'], ['railway', 'Railway'], ['hetzner', 'Hetzner'], ['git', 'Git']] },
-  { label: 'AI & TOOLING', items: [['openai', 'OpenAI'], ['anthropic', 'Anthropic'], ['grok', 'Grok'], ['claude', 'Claude Code'], ['cursor', 'Cursor']] },
-  { label: 'GAME DEV', fullWidth: true, items: [['unity', 'Unity'], ['cs', 'C#'], ['godot', 'Godot'], ['gdscript', 'GDScript']] },
+  { label: 'COMMERCE & CMS', items: [['shopify', 'Shopify'], ['liquid', 'Liquid'], ['wordpress', 'WordPress']] },
+  { label: 'FRONTEND', items: [['ts', 'TypeScript'], ['react', 'React']] },
+  { label: 'BACKEND & APIS', items: [['nodejs', 'Node.js'], ['express', 'Express'], ['php', 'PHP'], ['laravel', 'Laravel'], ['graphql', 'GraphQL']] },
+  { label: 'DATA', items: [['mysql', 'MySQL'], ['mongodb', 'MongoDB']] },
+  { label: 'DEVOPS', items: [['docker', 'Docker'], ['circleci', 'CircleCI']] },
+  { label: 'LLM APIS', items: [['openai', 'OpenAI'], ['anthropic', 'Anthropic']] },
 ];
 
 function skillTile(name) {
